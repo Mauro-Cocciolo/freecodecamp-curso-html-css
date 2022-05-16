@@ -1,6 +1,12 @@
+:root{
+  --pinguino-barriga: lightblue;
+  --pinguino-pico: green;
+}
+
+
 .pinguino {
-    --pinguino-barriga: gray;
-    --pinguino-pico: yellow;
+   /* --pinguino-barriga: gray;*/
+   /* --pinguino-pico: yellow;*/
     position: relative;
     margin: auto;
     display: block;
