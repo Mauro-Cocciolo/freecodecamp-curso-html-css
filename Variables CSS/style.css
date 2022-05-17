@@ -1,11 +1,16 @@
 :root{
-  --pinguino-barriga: lightblue;
-  --pinguino-pico: green;
+  --pinguino-piel: gray;
+  --pinguino-barriga: pink;
+  --pinguino-pico: orange;
+  --pinguino-mejilla: pink;
 }
 
+body {
+  background: var(--pinguino-barriga, #c6faf1);
+}
 
 .pinguino {
-   /* --pinguino-barriga: gray;*/
+   --pinguino-barriga: white;
    /* --pinguino-pico: yellow;*/
     position: relative;
     margin: auto;
@@ -18,7 +23,8 @@
 .pinguino-superior {
   top: 10%;
   left: 25%;
-  background: black;
+  background: black;/*con esto evito incompatibilidad con IntExplorer, asigno el background de repuesto, de respaldo: si el browser no reconoce la variable de abajo, toma esto. En crhome, que si detecta las variables, toma la de abajo que pisa a esto*/
+  background: var(--pinguino-piel, black);
   width: 50%;
   height: 45%;
   border-radius: 70% 70% 60% 60%;
@@ -28,6 +34,7 @@
   top: 40%;
   left: 23.5%;
   background: black;
+  background: var(--pinguino-piel, black);
   width: 53%;
   height: 45%;
   border-radius: 70% 70% 100% 100%;
@@ -37,6 +44,7 @@
   top: 0%;
   left: -5%;
   background: black;
+  background: var(--pinguino-piel, black);
   width: 30%;
   height: 60%;
   border-radius: 30% 30% 120% 30%;
@@ -48,6 +56,7 @@
   top: 0%;
   left: 75%;
   background: black;
+  background: var(--pinguino-piel, black);
   width: 30%;
   height: 60%;
   border-radius: 30% 30% 30% 120%;
@@ -58,6 +67,7 @@
 .mejilla-derecha {
   top: 15%;
   left: 35%;
+  background: white;
   background: var(--pinguino-barriga, white);
   width: 60%;
   height: 70%;
@@ -67,6 +77,7 @@
 .mejilla-izquierda {
   top: 15%;
   left: 5%;
+  background: white;
   background: var(--pinguino-barriga, white);
   width: 60%;
   height: 70%;
@@ -76,6 +87,7 @@
 .barriga {
   top: 60%;
   left: 2.5%;
+  background: white;
   background: var(--pinguino-barriga, white);
   width: 95%;
   height: 100%;
@@ -85,6 +97,7 @@
 .pie-derecho {
   top: 85%;
   left: 60%;
+  background: orange;
   background: var(--pinguino-pico, orange);
   width: 15%;
   height: 30%;
@@ -96,6 +109,7 @@
 .pie-izquierdo {
   top: 85%;
   left: 25%;
+  background: orange;
   background: var(--pinguino-pico, orange);
   width: 15%;
   height: 30%;
@@ -135,6 +149,7 @@
   top: 65%;
   left: 15%;
   background: pink;
+  background: var(--pinguino-mejilla, pink);
   width: 15%;
   height: 10%;
   border-radius: 50%;
@@ -144,6 +159,7 @@
   top: 65%;
   left: 70%;
   background: pink;
+  background: var(--pinguino-mejilla, pink);
   width: 15%;
   height: 10%;
   border-radius: 50%;
@@ -152,6 +168,7 @@
 .pico-superior {
   top: 60%;
   left: 40%;
+  background: orange;
   background: var(--pinguino-pico, orange);
   width: 20%;
   height: 10%;
@@ -161,14 +178,11 @@
 .pico-inferior {
   top: 65%;
   left: 42%;
+  background: orange;
   background: var(--pinguino-pico, orange);
   width: 16%;
   height: 10%;
   border-radius: 50%;
-}
-
-body {
-  background:#c6faf1;
 }
 
 .pinguino * {
